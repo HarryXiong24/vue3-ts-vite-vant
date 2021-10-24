@@ -1,6 +1,6 @@
 <template>
 	<h1 class="text">我是首页</h1>
-	vuex:{{ $store.state.num }}
+	vuex:{{ store.state.num }}
 	<button @click="add">++</button>
 	{{ state.name }}
 	{{ state.num }}
@@ -15,7 +15,7 @@
 	import { reactive } from 'vue';
 	import { useRouter } from 'vue-router';
 	import { useStore } from 'vuex';
-	import { article } from '@/api/index';
+	// import { article } from '@/api/index';
 	const router = useRouter();
 	const store = useStore();
 	const goLogin = () => {
@@ -26,13 +26,13 @@
 		state.num = store.state.num;
 		state.num > 20 ? (state.color = 'pink') : (state.color = '#ccc');
 	};
-	article().then((res: any) => {
-		console.log(res);
-	});
+	// article().then((res: any) => {
+	// 	console.log(res);
+	// });
 	const state = reactive({
 		name: 'harry',
 		num: 10,
-		color: '#ccc',
+		color: 'black',
 	});
 </script>
 <style >

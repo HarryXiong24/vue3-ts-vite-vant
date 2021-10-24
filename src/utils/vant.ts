@@ -1,7 +1,7 @@
 import { Button } from 'vant';
-const ant = {
+const vant = {
   install(Vue: { component: (arg0: string, arg1: any) => void }) {
     Vue.component(Button.name, Button);
   },
 };
-export default ant;
+export default vant;
